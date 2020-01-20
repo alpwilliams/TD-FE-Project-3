@@ -1,0 +1,56 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+
+}
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+/* ---- Layout Containers ---- */
+
+.main-header,
+.intro,
+fieldset,
+.main-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-header {
+	background-color: black;
+	color:white;
+	padding: 10px;
+}
+
+
+/* ---- Page Elements ---- */
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+
+	
+}
+
+@media (min-width: 1024px) {
+
+	
+
+}
