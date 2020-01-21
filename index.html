@@ -5,6 +5,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>The Code Review Registration</title>
+		<link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -20,42 +21,26 @@
 			<span>Get the latest news on how your code is doing right in your inbox</span>
 		</div>
 
-		<fieldset>
+		<fieldset class="contact_field">
 
-			<legend>Contact Information</legend>
+			<h3>Contact Information</h3>
 
 			<label for="name">Full Name</label>
-			<br>
-          	<input type="text" id="name" name="user_name">
-
-          	<br>
+          	<input type="text" id="name" name="user_name" placeholder="Required">
 
           	<label for="mail">Email Address</label>
-          	<br>
-          	<input type="email" id="mail" name="user_email">
-
-          	<br>
+          	<input type="email" id="mail" name="user_email" placeholder="Required">
 
           	<label for="phone">Phone Number</label>
-          	<br>
           	<input type="tel" id="phone" name="user_phone">
 
-          	<br>
-
           	<label for="street">Street Address</label>
-          	<br>
-          	<input type="?" id="street" name="user_street">
-
-          	<br>
+          	<input type="text" id="street" name="user_street">
 
           	<label for="city">City</label>
-          	<br>
-          	<input type="?" id="city" name="user_city">
-
-          	<br>
+          	<input type="text" id="city" name="user_city">
 
           	<label for="state">State</label>
-          	<br>
 	        <select id="state" name="user_state">
 	          <optgroup label="States">
 	            <option value="AL">Alabama (AL)</option>
@@ -131,42 +116,48 @@
           	<br>
           	<input type="?" id="zip" name="user_zip">
 
+        </fieldset>
+        <fieldset class="newsletter_field">  	
 
-			<legend>Newsletter</legend>
+			<h3>Newsletter</h3>
 
 			<label>Select the newsletters you would like to receive</label>
-			<br>
-	        <input type="checkbox" id="html_news" value="newsletter_html" name="user_newsletter">
-	        <label class="light" for="html_news">HTML News</label>
 
-	        <br>
+			<br>
+
+	        <input type="checkbox" id="html_news" value="newsletter_html" name="user_newsletter">
+	        <label class="formtext" for="html_news">HTML News</label>
+
+	        <br><br>
 
 	        <input type="checkbox" id="css_news" value="newsletter_css" name="user_newsletter">
-	        <label class="light" for="css_news">CSS News</label>
+	        <label class="formtext" for="css_news">CSS News</label>
 
-	        <br>
+	        <br><br>
 
 	        <input type="checkbox" id="javascript_news" value="newsletter_javascript" name="user_newsletter">
-	        <label class="light" for="javascript_news">Javascript News</label>
-	        
-	        <br>
+	        <label class="formtext" for="javascript_news">Javascript News</label>
+
+	        <br><br>
 
 	        <label>Newsletter format</label>
 
 	        <br>
 
 	        <input type="radio" id="html_format" value="html_format" name="newsletter_format">
-          	<label for="html_format" class="light">HTML</label>
+	        <label for="html_format" class="formtext">HTML</label>
 
-          	<br>
+	        <br><br>
 
           	<input type="radio" id="plain_format" value="plain_format" name="newsletter_format">
-          	<label for="plain_format" class="light">Plain text</label>
+          	<label for="plain_format" class="formtext">Plain text</label>
 
-          	<br>
+          	<br><br>
 
           	<label for="other">Other topics you'd like to hear about</label>
+
           	<br>
+
           	<textarea id="other" name="newsletter_other"></textarea>
 
 		</fieldset>
