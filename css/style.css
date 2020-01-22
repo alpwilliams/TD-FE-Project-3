@@ -21,6 +21,11 @@ h2 {
 	margin-bottom: 0;
 }
 
+legend {
+	font-size: 1.25em;
+	font-weight: 1000;
+}
+
 .intro_blurb {
 	font-size: .8em;
 	color: #b1acb9;
@@ -36,14 +41,13 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="state"],
-textarea,
-select {
+textarea {
+	display: flex;
 	background: #D8D2e1;
 	width: 100%;
 	border-radius: 5px;
-	padding: 7.5px;
+	padding: 15px;
 	margin-bottom: 20px;
-
 }
 
 input[type="checkbox"],
@@ -52,8 +56,17 @@ input[type="radio"] {
 	background: #D8D2e1;
 }
 
+select {
+	display: flex;
+	background: #D8D2e1;
+	width: 100%;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 0px;
+}
+
 label {
-	display: block;
+	display: flex;
 	margin-bottom: 5px;
 }
 
@@ -61,12 +74,9 @@ textarea {
 	padding: 25px;
 }
 
-
 /* ================================= 
   Base Layout Styles
 ==================================== */
-
-/* ---- Navigation ---- */
 
 /* ---- Layout Containers ---- */
 
@@ -93,15 +103,25 @@ fieldset,
 	border-bottom: 5px solid #34435e;
 }
 
+form {
+	display: block;
+	flex: 1;
+	padding-top: 30px;
+	margin-top: 5px;
+	border-top: 2.5px solid #b88e8d;
+}
+
 fieldset {
 	display: block;
 	flex: 1;
 }
 
 fieldset.contact_field {
-	margin-top: 5px;
-	border-top: 2.5px solid #b88e8d;
 	border-bottom: 2.5px solid #34435e;
+}
+
+fieldset.newsletter_field {
+	margin-top: 30px;
 }
 
 .main-footer {
@@ -110,7 +130,6 @@ fieldset.contact_field {
 	color: #b1acb9;
 	font-style: italic; 
 }
-
 
 /* ---- Page Elements ---- */
 
@@ -130,6 +149,10 @@ input:checked {
 	/*background: lightseagreen;*/
 }
 
+input[id="zip"] {
+	width: 200px;
+}
+
 label.formtext {
 	display: inline;
 	margin: 10px 10px;
@@ -142,7 +165,7 @@ button {
 	text-align: center;
 	width: 100%;
 	color: #34435e;
-	background-color: #6369d1;
+	background-color: #b88e8d;
 	box-shadow: 5px 5px 3 #34435e inset;
 }
 
@@ -151,12 +174,44 @@ button {
 ==================================== */
 
 @media (min-width: 768px) {
+	.intro,
+	form,
+	.main-footer {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1024px;
+	}
 
-	
-}
+	fieldset.contact_field {
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 
-@media (min-width: 1024px) {
+	.contact_field legend {
+		margin-bottom: 30px;
+	}
 
-	
+	.contact_field label {
+		display: flex;
+		width: 20%;
+	}
+
+	.contact_field input,
+	.contact_field select {
+		display: flex;
+		width: 80%;
+	}
+
+	select {
+		margin-bottom: 20px;
+	}
+
+	input[id="zip"] {
+		width: 200px;
+		flex-direction: row;
+	}
 
 }
