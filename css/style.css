@@ -97,10 +97,24 @@ input:focus {
 	border-radius: 5px;
 }
 
+input:checked {
+	color: #FFF;
+	background: lightseagreen;
+}
+
 label.formtext {
 	display: inline;
 	margin: 10px 10px;
 	padding: 10px;
+}
+
+button {
+	padding: 10px 10px 10px 10px;
+	border-radius: 5px;
+	text-align: center;
+	width: 100%;
+	color: #FFF;
+	background-color: lightseagreen;
 }
 
 /* ================================= 
