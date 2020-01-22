@@ -7,7 +7,23 @@
 }
 
 body {
+	font-family: 'Noto Serif JP', serif;
 	min-height: 100vh;
+}
+
+h1 {
+	font-size: 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+.intro_blurb {
+	font-size: .8em;
+	color: #b1acb9;
 }
 
 fieldset {
@@ -22,7 +38,7 @@ input[type="tel"],
 input[type="state"],
 textarea,
 select {
-	background: gainsboro;
+	background: #D8D2e1;
 	width: 100%;
 	border-radius: 5px;
 	padding: 7.5px;
@@ -32,7 +48,8 @@ select {
 
 input[type="checkbox"],
 input[type="radio"] {
-
+	margin: 0 4px 8px 0;
+	background: #D8D2e1;
 }
 
 label {
@@ -63,15 +80,17 @@ fieldset,
 }
 
 .main-header {
-	background-color: black;
-	color:white;
+	background-color: #34435e;
+	color: #d8d2e1;
 	padding: 10px;
 }
 
 .intro {
 	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-bottom: 35px;
-	border-bottom: 5px solid #000;
+	border-bottom: 5px solid #34435e;
 }
 
 fieldset {
@@ -81,8 +100,15 @@ fieldset {
 
 fieldset.contact_field {
 	margin-top: 5px;
-	border-top: 2px solid #000;
-	border-bottom: 2px solid #000;
+	border-top: 2.5px solid #b88e8d;
+	border-bottom: 2.5px solid #34435e;
+}
+
+.main-footer {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	color: #b1acb9;
+	font-style: italic; 
 }
 
 
@@ -90,16 +116,18 @@ fieldset.contact_field {
 
 input::placeholder {
 	text-align: right;
+	font-style: italic;
 }
 
 input:focus {
-	border: 2px solid darkblue;
+	border: 2px solid #6369d1;
 	border-radius: 5px;
 }
 
 input:checked {
 	color: #FFF;
-	background: lightseagreen;
+	box-shadow: inset 5em 1em gold;
+	/*background: lightseagreen;*/
 }
 
 label.formtext {
@@ -109,12 +137,13 @@ label.formtext {
 }
 
 button {
-	padding: 10px 10px 10px 10px;
+	padding: 20px 10px 20px 10px;
 	border-radius: 5px;
 	text-align: center;
 	width: 100%;
-	color: #FFF;
-	background-color: lightseagreen;
+	color: #34435e;
+	background-color: #6369d1;
+	box-shadow: 5px 5px 3 #34435e inset;
 }
 
 /* ================================= 
