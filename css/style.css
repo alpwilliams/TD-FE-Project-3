@@ -23,7 +23,7 @@ h2 {
 
 legend {
 	font-size: 1.25em;
-	font-weight: 1000;
+	font-weight: bolder;
 }
 
 .intro_blurb {
@@ -138,15 +138,11 @@ input::placeholder {
 	font-style: italic;
 }
 
-input:focus {
+input:focus,
+textarea:focus,
+select:focus {
 	border: 2px solid #6369d1;
 	border-radius: 5px;
-}
-
-input:checked {
-	color: #FFF;
-	box-shadow: inset 5em 1em gold;
-	/*background: lightseagreen;*/
 }
 
 input[id="zip"] {
@@ -166,7 +162,7 @@ button {
 	width: 100%;
 	color: #34435e;
 	background-color: #b88e8d;
-	box-shadow: 5px 5px 3 #34435e inset;
+	box-shadow: 5px 5px 3px #34435e inset;
 }
 
 /* ================================= 
@@ -187,7 +183,7 @@ button {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: start;
 	}
 
 	.contact_field legend {
@@ -197,6 +193,7 @@ button {
 	.contact_field label {
 		display: flex;
 		width: 20%;
+		align-content: flex-start;
 	}
 
 	.contact_field input,
@@ -211,7 +208,6 @@ button {
 
 	input[id="zip"] {
 		width: 200px;
-		flex-direction: row;
 	}
 
 }
