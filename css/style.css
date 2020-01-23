@@ -43,7 +43,7 @@ input[type="tel"],
 input[type="state"],
 textarea {
 	display: flex;
-	background: #D8D2e1;
+	background: #d8d2e1;
 	width: 100%;
 	border-radius: 5px;
 	padding: 15px;
@@ -52,13 +52,13 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-	margin: 0 4px 8px 0;
-	background: #D8D2e1;
+	margin: 0 5px 20px 0;
+	background: #d8d2e1;
 }
 
 select {
 	display: flex;
-	background: #D8D2e1;
+	background: #d8d2e1;
 	width: 100%;
 	border-radius: 5px;
 	padding: 15px;
@@ -67,7 +67,8 @@ select {
 
 label {
 	display: flex;
-	margin-bottom: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 textarea {
@@ -124,6 +125,10 @@ fieldset.newsletter_field {
 	margin-top: 30px;
 }
 
+.newsletter_option {
+	margin-bottom: 0px;
+}
+
 .main-footer {
 	margin-top: 30px;
 	margin-bottom: 15px;
@@ -155,6 +160,11 @@ label.formtext {
 	padding: 10px;
 }
 
+label[for="zip"] {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 button {
 	padding: 20px 10px 20px 10px;
 	border-radius: 5px;
@@ -162,7 +172,12 @@ button {
 	width: 100%;
 	color: #34435e;
 	background-color: #b88e8d;
-	box-shadow: 5px 5px 3px #34435e inset;
+	box-shadow: 5px 5px 3px #34435e;
+}
+
+input:focus,
+textarea:focus {
+	transform: scale(1.025,1.025);
 }
 
 /* ================================= 
@@ -194,6 +209,7 @@ button {
 		display: flex;
 		width: 20%;
 		align-content: flex-start;
+		padding-bottom: 20px;
 	}
 
 	.contact_field input,
@@ -204,6 +220,11 @@ button {
 
 	select {
 		margin-bottom: 20px;
+	}
+
+	label[for="zip"] {
+	margin-top: 20px;
+	margin-bottom: 20px;
 	}
 
 	input[id="zip"] {
