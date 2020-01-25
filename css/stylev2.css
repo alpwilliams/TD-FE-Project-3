@@ -9,7 +9,16 @@
 body {
 	font-family: 'Noto Serif JP', serif;
 	min-height: 100vh;
-	object-position: center;
+}
+
+.main-header {
+	background-color: #34435e;
+	color: #d8d2e1;
+}
+
+.intro_blurb {
+	font-size: .8em;
+	color: #b1acb9;
 }
 
 h1 {
@@ -19,7 +28,15 @@ h1 {
 }
 
 h2 {
-	margin-bottom: 0;
+
+}
+
+h3 {
+
+}
+
+fieldset {
+	
 }
 
 legend {
@@ -27,50 +44,21 @@ legend {
 	font-weight: bolder;
 }
 
-.intro_blurb {
-	font-size: .8em;
+input,
+select,
+textarea {
+	background: #d8d2e1;
+}
+
+button {
+	color: #34435e;
+	background-color: #b88e8d;
+	box-shadow: 5px 5px 3px #34435e;
+}
+
+.main-footer {
 	color: #b1acb9;
-}
-
-fieldset {
-	margin: 0;
-	border: none;
-	margin-top: auto;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="state"],
-textarea {
-	background: #d8d2e1;
-	/*width: 100%;*/
-	border-radius: 5px;
-	padding: 15px;
-	margin-bottom: 20px;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	margin: 0 5px 20px 0;
-	background: #d8d2e1;
-}
-
-select {
-	background: #d8d2e1;
-	/*width: 100%;*/
-	border-radius: 5px;
-	padding: 15px;
-	margin-bottom: 0px;
-}
-
-label {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-textarea {
-	padding: 25px;
+	font-style: italic; 
 }
 
 /* ================================= 
@@ -89,8 +77,6 @@ fieldset,
 }
 
 .main-header {
-	background-color: #34435e;
-	color: #d8d2e1;
 	padding: 10px;
 }
 
@@ -103,15 +89,28 @@ fieldset,
 }
 
 form {
-	display: block;
-	/*flex-wrap: column;
-	flex: 1;*/
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: auto;
 	padding-top: 30px;
 	margin-top: 5px;
 	border-top: 2.5px solid #b88e8d;
 }
 
+fieldset {
+	margin: auto;
+	flex-basis: 0;
+	justify-content: flex-start;
+	border: none;
+}
+
+.newsletter_field .inputgroup {
+	flex-direction: row;
+}
+
 .inputgroup {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -119,9 +118,19 @@ form {
 	flex-basis: auto;
 }
 
-fieldset {
+.main-footer {
 	display: flex;
-	flex: 1;
+	justify-content: center;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+/* ---- Page Elements ---- */
+
+.contact_field label,
+.contact_field input,
+textarea {
+	width: 100%;
 }
 
 fieldset.contact_field {
@@ -132,18 +141,24 @@ fieldset.newsletter_field {
 	margin-top: 30px;
 }
 
-.newsletter_option {
-	margin-bottom: 0px;
+input,
+select {
+	width: 100%;
 }
 
-.main-footer {
-	margin-top: 30px;
-	margin-bottom: 15px;
-	color: #b1acb9;
-	font-style: italic; 
+input[type="checkbox"],
+input[type="radio"] {
+	width: 10%;
+	align-self: center;
 }
 
-/* ---- Page Elements ---- */
+input[id="zip"] {
+	width: 200px;
+}
+
+label.formtext {
+	align-self: center;
+}
 
 input::placeholder {
 	text-align: right;
@@ -157,19 +172,9 @@ select:focus {
 	border-radius: 5px;
 }
 
-input[id="zip"] {
-	width: 200px;
-}
-
-label.formtext {
-	display: inline;
-	margin: 10px 10px;
-	padding: 10px;
-}
-
-label[for="zip"] {
-	margin-top: 0px;
-	margin-bottom: 0px;
+input:focus,
+textarea:focus {
+	transform: scale(1.025,1.025);
 }
 
 button {
@@ -177,14 +182,6 @@ button {
 	border-radius: 5px;
 	text-align: center;
 	width: 100%;
-	color: #34435e;
-	background-color: #b88e8d;
-	box-shadow: 5px 5px 3px #34435e;
-}
-
-input:focus,
-textarea:focus {
-	transform: scale(1.025,1.025);
 }
 
 /* ================================= 
@@ -192,24 +189,23 @@ textarea:focus {
 ==================================== */
 
 @media (min-width: 768px) {
+
 	.intro,
 	form,
+	fieldset,
 	.main-footer {
 		margin-left: auto;
 		margin-right: auto;
+		width: 100%;
 		max-width: 1024px;
 	}
 
-	fieldset.contact_field {
+	.inputgroup {
 		margin: auto;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: start;
-	}
-
-	.contact_field legend {
-		margin-bottom: 30px;
 	}
 
 	.contact_field label {
@@ -222,27 +218,6 @@ textarea:focus {
 	.contact_field select {
 		width: 80%;
 		flex-basis: auto;
-	}
-
-	.inputgroup {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: flex-start;
-		flex-basis: auto;
-	}
-
-	select {
-		margin-bottom: 20px;
-	}
-
-	label[for="zip"] {
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-
-	input[id="zip"] {
-		width: 200px;
 	}
 
 }
