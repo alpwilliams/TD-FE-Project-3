@@ -56,7 +56,7 @@
 	          	<div class="inputgroup">
 	          	<label for="state">State</label>
 		        <select id="state" name="user_state">
-		        	<option value="-">Select State:</option>
+		        	<option value="">Choose State</option>
 		          <optgroup label="States">
 		            <option value="AL">Alabama (AL)</option>
 					<option value="AK">Alaska (AK)</option>
@@ -126,12 +126,9 @@
 		        </select>
 		        </div>
 
-		        <br>
-
 	          	<div class="inputgroup">
 	          	<label for="zip">Zip Code</label>
-	          	<br>
-	          	<input type="text" pattern="[0-9]{5}" id="zip" name="user_zip" placeholder="e.g. 12345 ">
+	          	<input type="text" pattern="[0-9]{5}" id="zip" name="user_zip" maxlength="5" placeholder="e.g. 12345 ">
 	          	</div>
 
 	        </fieldset>

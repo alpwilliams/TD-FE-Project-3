@@ -17,7 +17,7 @@ body {
 }
 
 .intro_blurb {
-	font-size: .8em;
+	font-size: 1em;
 	color: #b1acb9;
 }
 
@@ -28,15 +28,7 @@ h1 {
 }
 
 h2 {
-
-}
-
-h3 {
-
-}
-
-fieldset {
-	
+	font-weight: bolder
 }
 
 legend {
@@ -88,6 +80,10 @@ fieldset,
 	border-bottom: 5px solid #34435e;
 }
 
+h2 {
+	margin-bottom: 0;
+}
+
 form {
 	display: flex;
 	flex-wrap: wrap;
@@ -103,6 +99,7 @@ fieldset {
 	flex-basis: 0;
 	justify-content: flex-start;
 	border: none;
+	width: 100%;
 }
 
 .newsletter_field .inputgroup {
@@ -121,14 +118,33 @@ fieldset {
 .main-footer {
 	display: flex;
 	justify-content: center;
-	margin-top: 30px;
-	margin-bottom: 15px;
+	margin:30px 0px 20px 0px;
 }
 
 /* ---- Page Elements ---- */
 
+input,
+select,
+textarea {
+	border-radius: 5px;
+	margin: 10px 0px 10px 0px;
+	flex-basis: auto;
+	transition-property: transform;
+	transition-duration: 2s;
+}
+
+input,
+select {
+	padding: 15px;
+}
+
+textarea {
+	padding: 20px;
+}
+
 .contact_field label,
-.contact_field input,
+input,
+select,
 textarea {
 	width: 100%;
 }
@@ -141,28 +157,32 @@ fieldset.newsletter_field {
 	margin-top: 30px;
 }
 
-input,
-select {
-	width: 100%;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
-	width: 10%;
+	width: auto;
 	align-self: center;
+	flex-basis: auto;
+	margin-right: 10px;
 }
 
 input[id="zip"] {
-	width: 200px;
+	width: 50%;
+	max-width: 200px;
 }
 
 label.formtext {
 	align-self: center;
+	width: auto;
 }
 
-input::placeholder {
-	text-align: right;
+input::placeholder,
+select option:first-child {
 	font-style: italic;
+}
+
+input[id="name"],
+input[id="mail"] {
+	text-align: right;
 }
 
 input:focus,
@@ -170,10 +190,6 @@ textarea:focus,
 select:focus {
 	border: 2px solid #6369d1;
 	border-radius: 5px;
-}
-
-input:focus,
-textarea:focus {
 	transform: scale(1.025,1.025);
 }
 
@@ -182,6 +198,7 @@ button {
 	border-radius: 5px;
 	text-align: center;
 	width: 100%;
+	margin: 10px 0px 5px 0px;
 }
 
 /* ================================= 
@@ -210,8 +227,7 @@ button {
 
 	.contact_field label {
 		width: 20%;
-		align-content: flex-start;
-		padding-bottom: 20px;
+		align-self: center;
 	}
 
 	.contact_field input,
